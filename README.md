@@ -20,6 +20,10 @@ Un thème moderne et immersif pour Home Assistant, basé sur l'esthétique **Gla
 ### 1. Prérequis
 Assurez-vous que [Card-Mod](https://github.com/thomasloven/lovelace-card-mod) est installé via HACS. C'est indispensable pour les effets de flou et de bordures.
 
+## ⚖️ Licence
+
+Ce projet est sous licence MIT. Voir le fichier [LICENSE](LICENSE) pour plus de détails.
+
 ### 2. Téléchargement
 1. Copiez le fichier `glass_theme.yaml` dans votre dossier `themes/` de Home Assistant.
 2. Ajoutez la ligne suivante à votre `configuration.yaml` si ce n'est pas déjà fait :
