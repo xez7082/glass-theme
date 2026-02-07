@@ -1,0 +1,40 @@
+glass-theme:
+  # Couleurs de l'interface
+  primary-color: "#00d2ff"
+  accent-color: "#00d2ff"
+  
+  # Configuration du mode sombre
+  modes:
+    dark:
+      # Arrière-plan global (un dégradé sombre pour faire ressortir le verre)
+      lovelace-background: "radial-gradient(circle, #242424 0%, #121212 100%)"
+      
+      # Paramètres des Cartes (Le look Lumina/Glass)
+      ha-card-background: "rgba(255, 255, 255, 0.08)"
+      ha-card-border-radius: "18px"
+      ha-card-border-width: "1px"
+      ha-card-border-color: "rgba(255, 255, 255, 0.1)"
+      
+      # Headers et Sidebar
+      app-header-background-color: "rgba(0, 0, 0, 0.5)"
+      sidebar-background-color: "rgba(0, 0, 0, 0.3)"
+      
+      # Card-Mod (C'est ce qui active le flou réel derrière les cartes)
+      card-mod-theme: "glass-theme"
+      card-mod-card: |
+        ha-card {
+          backdrop-filter: blur(15px);
+          -webkit-backdrop-filter: blur(15px);
+          box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.6);
+          border: 1px solid rgba(255, 255, 255, 0.1) !important;
+        }
+
+      # Couleurs des états
+      state-icon-color: "#00d2ff"
+      state-icon-active-color: "#00d2ff"
+      paper-item-icon-active-color: "#00d2ff"
+      
+      # Sliders et contrôles
+      switch-checked-button-color: "#00d2ff"
+      switch-checked-track-color: "rgba(0, 210, 255, 0.2)"
+      slider-color: "#00d2ff"
