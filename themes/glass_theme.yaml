@@ -1,35 +1,37 @@
 glass-theme:
-  # Configuration globale
-  modes:
-    dark:
-     # Remplace .jpg par .png
-      lovelace-background: "center / cover no-repeat fixed url('https://raw.githubusercontent.com/xez7082/glass-theme/main/background.png')"      
-      # Couleurs principales
-      primary-color: "#00d2ff"
-      accent-color: "#00d2ff"
-      
-      # Style des Cartes (Effet Verre)
-      ha-card-background: "rgba(10, 12, 18, 0.6)"
-      ha-card-border-radius: "18px"
-      ha-card-border-width: "1px"
-      ha-card-border-color: "rgba(0, 210, 255, 0.2)"
-      
-      # Effet de flou (Card-Mod obligatoire)
-      card-mod-theme: "glass-theme"
-      card-mod-card: |
-        ha-card {
-          backdrop-filter: blur(15px);
-          -webkit-backdrop-filter: blur(15px);
-          box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.7);
-          border: 1px solid rgba(255, 255, 255, 0.08) !important;
-        }
+  # Configuration du fond
+  lovelace-background: "center / cover no-repeat fixed url('https://raw.githubusercontent.com/xez7082/glass-theme/main/background.png')"
 
-      # Sidebar et En-tête
-      app-header-background-color: "rgba(0, 0, 0, 0.4)"
-      sidebar-background-color: "rgba(5, 5, 10, 0.8)"
+  # Couleurs de base
+  primary-color: "#00d2ff"
+  accent-color: "#00d2ff"
+  
+  # Variables pour les cartes (utilisées par les cartes standards)
+  ha-card-border-radius: "18px"
+  ha-card-border-width: "1px"
+  ha-card-background: "rgba(10, 12, 18, 0.6)"
+  ha-card-border-color: "rgba(0, 210, 255, 0.2)"
+
+  # --- INJECTION CARD MOD (Le secret pour l'adaptation automatique) ---
+  card-mod-theme: glass-theme
+  card-mod-card: |
+    ha-card {
+      /* Flou du verre */
+      backdrop-filter: blur(15px) !important;
+      -webkit-backdrop-filter: blur(15px) !important;
       
-      # Icônes et contrôles
-      state-icon-color: "#00d2ff"
-      state-icon-active-color: "#00d2ff"
-      switch-checked-button-color: "#00d2ff"
-      switch-checked-track-color: "rgba(0, 210, 255, 0.3)"
+      /* Ombre portée pour la profondeur */
+      box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.5) !important;
+      
+      /* Forcer la bordure fine style Lumina */
+      border: 1px solid rgba(255, 255, 255, 0.1) !important;
+      
+      /* Espacement interne pour un look propre */
+      overflow: hidden !important;
+    }
+
+    /* Optionnel : Style spécifique pour les titres de cartes */
+    .card-header {
+      font-weight: 400 !important;
+      color: #00d2ff !important;
+    }
