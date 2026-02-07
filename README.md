@@ -1,4 +1,9 @@
-# 💎 Glassmorphism Blue Neon Theme for Home Assistant
+# 💎 Glassmorphism Blue Neon Theme
+
+[![HACS](https://img.shields.io/badge/HACS-Default-blue.svg)](https://github.com/hacs/integration)
+![Version](https://img.shields.io/github/v/release/xez7082/glass-theme?include_prereleases)
+[![License](https://img.shields.io/github/license/xez7082/glass-theme)](LICENSE)
+[![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://github.com/xez7082/glass-theme/graphs/commit-activity)
 
 Un thème moderne et immersif pour Home Assistant, basé sur l'esthétique **Glassmorphism** (effet de verre dépoli) et des accents **Néon Cyan (#00f9f9)**. Inspiré par le design "Lumina".
 
