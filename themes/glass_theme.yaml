@@ -1,6 +1,6 @@
 glass-theme:
   # Image de fond et base
-  lovelace-background: "center / cover no-repeat fixed url('https://raw.githubusercontent.com/xez7082/glass-theme/main/background.png')"
+  lovelace-background: "center / cover no-repeat fixed url('https://raw.githubusercontent.com/xez7082/glass-theme/main/f.png')"
   primary-color: "#00f9f9"
   accent-color: "#00f9f9"
   
