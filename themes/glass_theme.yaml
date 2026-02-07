@@ -3,7 +3,7 @@ glass-theme:
   modes:
     dark:
       # L'image de fond (Style Lumina Energy / Glassmorphism)
-      lovelace-background: "center / cover no-repeat fixed url('https://raw.githubusercontent.com/ton-pseudo/glass-theme/main/background.jpg')"
+      lovelace-background: "center / cover no-repeat fixed url('https://raw.githubusercontent.com/xez7082/glass-theme/main/background.jpg')"
       
       # Couleurs principales
       primary-color: "#00d2ff"
