@@ -1,23 +1,35 @@
 glass-theme:
-  # Image de fond et base
+  # Base du thème
   lovelace-background: "center / cover no-repeat fixed url('https://raw.githubusercontent.com/xez7082/glass-theme/main/f.png')"
   primary-color: "#00f9f9"
   accent-color: "#00f9f9"
   
   modes:
     dark:
-      # Variables de cartes standards
+      # --- Variables de base ---
       ha-card-background: "rgba(10, 12, 18, 0.4)"
       ha-card-border-radius: "18px"
       ha-card-border-width: "1px"
       ha-card-border-color: "#00f9f9"
+      
+      # --- Couleurs d'état ---
+      state-icon-active-color: "#00f9f9"
+      paper-item-icon-active-color: "#00f9f9"
+      
+      # --- Interface Globale ---
+      app-header-background-color: "rgba(0, 0, 0, 0.3)"
+      app-header-text-color: "#00f9f9"
+      sidebar-background-color: "rgba(5, 5, 10, 0.6)"
+      sidebar-icon-color: "#00f9f9"
+      sidebar-selected-icon-color: "#00f9f9"
+      sidebar-selected-text-color: "#00f9f9"
 
-      # Injection Card-Mod (Le moteur du design)
+      # --- Moteur de Design (Card-Mod) ---
       card-mod-theme: "glass-theme"
       
-      # Style pour TOUTE l'interface (Scrollbar incluse)
+      # 1. Styles globaux (Scrollbar & Interface)
       card-mod-theme-grid: |
-        /* --- Personnalisation de la Scrollbar --- */
+        /* Scrollbar Néon Fine */
         *::-webkit-scrollbar {
           width: 6px !important;
           height: 6px !important;
@@ -28,37 +40,57 @@ glass-theme:
         *::-webkit-scrollbar-thumb {
           background: #00f9f9 !important;
           border-radius: 10px !important;
-          box-shadow: 0 0 10px #00f9f9 !important; /* Glow sur la barre */
+          box-shadow: 0 0 10px #00f9f9 !important;
         }
         *::-webkit-scrollbar-thumb:hover {
-          background: #ffffff !important; /* Blanchit au survol */
+          background: #ffffff !important;
         }
 
+      # 2. Styles des Cartes
       card-mod-card: |
         ha-card {
+          /* Effet de Verre */
           backdrop-filter: blur(20px) !important;
           -webkit-backdrop-filter: blur(20px) !important;
           border: 1px solid rgba(0, 249, 249, 0.4) !important;
           box-shadow: 0 0 10px rgba(0, 249, 249, 0.1), 0 8px 32px 0 rgba(0, 0, 0, 0.5) !important;
           background-image: linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0) 50%) !important;
+          
+          /* Animation de base */
           transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1) !important;
         }
 
+        /* Animation au Survol */
         ha-card:hover {
           transform: translateY(-5px) scale(1.01) !important;
           border: 1.5px solid rgba(0, 249, 249, 1) !important;
           box-shadow: 0 0 25px rgba(0, 249, 249, 0.4), 0 15px 40px rgba(0, 0, 0, 0.7) !important;
           backdrop-filter: blur(30px) !important;
+          z-index: 10 !important;
         }
-        
+
+        /* Titres des cartes */
         .card-header {
           color: #00f9f9 !important;
           text-shadow: 0 0 10px rgba(0, 249, 249, 0.5);
           font-weight: 300 !important;
+          letter-spacing: 1px;
         }
 
-      # Sidebar et en-tête
-      app-header-background-color: "rgba(0, 0, 0, 0.3)"
-      sidebar-background-color: "rgba(5, 5, 10, 0.6)"
-      state-icon-active-color: "#00f9f9"
-      paper-item-icon-active-color: "#00f9f9"
+        /* Glow des icônes actives avec pulsation */
+        ha-state-icon[data-state="on"], 
+        ha-state-icon[data-state="active"],
+        .state-icon.active {
+          filter: drop-shadow(0 0 5px #00f9f9) drop-shadow(0 0 10px rgba(0, 249, 249, 0.4)) !important;
+          animation: pulse-glow 2s infinite alternate !important;
+        }
+
+        @keyframes pulse-glow {
+          from { filter: drop-shadow(0 0 3px #00f9f9); }
+          to { filter: drop-shadow(0 0 8px #00f9f9) brightness(1.2); }
+        }
+
+      # --- Badges (Cercle de notification) ---
+      label-badge-red: "#00f9f9"
+      label-badge-background-color: "rgba(0,0,0,0.5)"
+      label-badge-text-color: "#ffffff"
