@@ -1,39 +1,28 @@
-# 💎 Glass Theme for Home Assistant
+# 💎 Glassmorphism Blue Neon Theme for Home Assistant
 
-Un thème moderne et épuré de type **Glassmorphism**, inspiré par le design de la carte *Lumina Energy*. Ce thème apporte un effet de verre dépoli (blur), des bordures lumineuses subtiles et une interface minimaliste à votre tableau de bord Home Assistant.
-
-![Version](https://img.shields.io/badge/version-1.0.0-blue.svg)
-![HACS](https://img.shields.io/badge/HACS-Custom-orange.svg)
-
----
+Un thème moderne et immersif pour Home Assistant, basé sur l'esthétique **Glassmorphism** (effet de verre dépoli) et des accents **Néon Cyan (#00f9f9)**. Inspiré par le design "Lumina".
 
 ## ✨ Caractéristiques
-* 🌫️ **Effet Verre Dépoli** : Utilisation du `backdrop-filter` pour un flou élégant.
-* 🌑 **Optimisé pour le Mode Sombre** : Conçu pour reposer les yeux tout en restant lisible.
-* 📱 **Design Responsif** : S'adapte parfaitement sur mobile et tablette.
-* 🔗 **Style Lumina** : Intégration visuelle parfaite avec les cartes d'énergie modernes.
 
----
+* **Glassmorphism profond** : Effet de flou dynamique (`backdrop-filter`) sur toutes les cartes.
+* **Accents Néon** : Bordures et icônes en bleu vibrant `#00f9f9`.
+* **Interactivité (Hover)** : Les cartes s'élèvent et s'illuminent au passage de la souris.
+* **Scrollbar Stylisée** : Barre de défilement ultra-fine et lumineuse.
+* **Finition "Glossy"** : Reflets de lumière subtils intégrés aux cartes.
 
-## 🛠 Prérequis
+## 📸 Aperçu
 
-Pour obtenir l'effet de flou (blur), vous **devez** installer l'extension suivante via HACS :
-* [**Card Mod**](https://github.com/thomasloven/lovelace-card-mod)
+> [!TIP]
+> Le rendu est optimal avec un fond d'écran sombre et fluide. Le thème utilise l'image `f.png` présente dans ce dépôt.
 
----
+## 🛠 Installation
 
-## 🚀 Installation
+### 1. Prérequis
+Assurez-vous que [Card-Mod](https://github.com/thomasloven/lovelace-card-mod) est installé via HACS. C'est indispensable pour les effets de flou et de bordures.
 
-### Via HACS (Recommandé)
-1. Ouvrez **HACS** dans votre instance Home Assistant.
-2. Allez dans la section **Frontend**.
-3. Cliquez sur les 3 points en haut à droite et sélectionnez **Dépôts personnalisés**.
-4. Collez l'URL de ce dépôt : `https://github.com/TON_PSEUDO/glass-theme`
-5. Sélectionnez la catégorie **Thème** et cliquez sur **Ajouter**.
-6. Cliquez sur "Télécharger" sur la fiche du thème.
-
-### Configuration YAML
-Vérifiez que votre fichier `configuration.yaml` contient bien ceci :
-```yaml
-frontend:
-  themes: !include_dir_merge_named themes
+### 2. Téléchargement
+1. Copiez le fichier `glass_theme.yaml` dans votre dossier `themes/` de Home Assistant.
+2. Ajoutez la ligne suivante à votre `configuration.yaml` si ce n'est pas déjà fait :
+   ```yaml
+   frontend:
+     themes: !include_dir_merge_named themes
