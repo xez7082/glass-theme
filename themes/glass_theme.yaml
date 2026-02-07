@@ -3,7 +3,7 @@ glass-theme:
   modes:
     dark:
      # Remplace .jpg par .png
-      lovelace-background: "center / cover no-repeat fixed url('https://raw.githubusercontent.com/ton-pseudo/glass-theme/main/background.png')"      
+      lovelace-background: "center / cover no-repeat fixed url('https://raw.githubusercontent.com/xez7082/glass-theme/main/background.png')"      
       # Couleurs principales
       primary-color: "#00d2ff"
       accent-color: "#00d2ff"
